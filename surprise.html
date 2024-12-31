@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <style>
+        /* Background Styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: radial-gradient(circle, #ffafbd, #ffc3a0, #ff9a9e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Container Styling */
+        .content {
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Animated "Happy New Year" Text */
+        .content h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff1493, 0 0 40px #ff69b4;
+            }
+            100% {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff69b4, 0 0 40px #ff1493, 0 0 50px #ff69b4;
+            }
+        }
+
+        /* Image Styling */
+        .content img {
+            margin-top: 20px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Falling Sparkles Animation */
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+        }
+
+        /* Randomize Sparkle Properties */
+        .sparkle:nth-child(odd) {
+            background-color: #ff69b4;
+            animation-duration: 5s;
+        }
+
+        .sparkle:nth-child(even) {
+            background-color: #ff1493;
+            animation-duration: 6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Happy New Year SHRISHTIIII!</h1>
+        <img src="./rose-petal.png" alt="Rose Petals">
+    </div>
+
+    <!-- Generate Sparkles -->
+    <script>
+        const body = document.body;
+
+        // Create 100 sparkles
+        for (let i = 0; i < 100; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.left = `${Math.random() * 100}vw`;
+            sparkle.style.animationDelay = `${Math.random() * 5}s`;
+            body.appendChild(sparkle);
+        }
+    </script>
+</body>
+</html>

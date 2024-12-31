@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Centered Image</title>
+    <style>
+        body {
+            background-image: url('./download.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            max-width: 70%;
+            max-height: 80%;
+            height: auto;
+            border-radius: 15px; /* Optional for rounded corners */
+        }
+        button {
+            margin-top: 1em;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            font-family: 'Brush Script MT', cursive;
+            color: #fff;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="./ss.jpeg" alt="Sample Image" />
+    <button onclick="window.location.href='./surprise.html';">Click here to see a happy girl.</button>
+    </div>
+</body>
+</html>
